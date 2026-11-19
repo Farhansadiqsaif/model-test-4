@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="bn">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DU Science Lab | Model Test 04</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f5ef;color:#182f28;font:16px/1.65 "Nirmala UI","Noto Sans Bengali",system-ui,sans-serif}header{background:#143e32;color:white;position:sticky;top:0;z-index:2}header div,main{max-width:920px;margin:auto;padding:14px 20px}header div{display:flex;align-items:center;justify-content:space-between}#clock{font:700 1.5rem monospace;color:#f1d999}section,article{background:white;padding:clamp(16px,4vw,32px);border:1px solid #d7e1d9;border-radius:14px;margin:14px 0;scroll-margin-top:80px}h1{font-size:clamp(2rem,6vw,3.6rem);line-height:1.2;margin:12px 0}h2,h3,p{margin:.55em 0}small{color:#496457}button,nav a,.file{background:#1b624b;color:white;border:0;padding:10px 16px;border-radius:8px;font:inherit;cursor:pointer;display:inline-block;text-decoration:none;margin:4px}button:disabled{opacity:.55;cursor:wait}.secondary,nav a{background:#e7eee9;color:#234937}label{display:block;margin:8px 0}input,textarea{font:inherit;max-width:100%}input:not([type=radio]),textarea{border:1px solid #9baea2;padding:9px;border-radius:7px}textarea{width:100%;min-height:105px}.option{border:1px solid #dbe5dd;border-radius:8px;padding:8px;cursor:pointer}.option:has(:checked){background:#e4f3e8}img{max-width:100%;max-height:320px;display:block}.answer{white-space:pre-wrap;background:#edf5ef;padding:12px;border-radius:8px}.notice{color:#70470d}h2[id]{scroll-margin-top:80px}table{border-collapse:collapse}td,th{padding:5px 10px;border-bottom:1px solid #ddd}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #dbab48}#warning{margin:auto;max-width:920px;color:#8e2d19} @media print{header{position:static}.controls,button,nav,#network{display:none}body{background:white}article{break-inside:avoid}}
+</style>
+<header><div><b>DU SCIENCE LAB · MODEL TEST 04</b><span id="clock"></span></div></header>
+<div id="warning" role="alert"></div><main id="app">পরীক্ষা লোড হচ্ছে…</main>
+<script>
+"use strict";
+const ENDPOINT="https://script.google.com/macros/s/AKfycbz_N5gN3CYf7QmqV42llJEC5jvDfKpy4Kr19KDrmVcMzl8PE36csyUfMuNgQbHbBepBwQ/exec";
+const SUBJECTS=["পদার্থবিজ্ঞান","রসায়ন","উচ্চতর গণিত","জীববিজ্ঞান"];
+// Each line contains the stem, four choices, the one-based key, and the solution.
+const bank=`একটি লিফট নিচে নামছে, কিন্তু তার বেগের মান কমছে। ভেতরে স্থির দাঁড়ানো ব্যক্তির আপাত ওজন কেমন হবে?|প্রকৃত ওজনের চেয়ে বেশি|প্রকৃত ওজনের চেয়ে কম|প্রকৃত ওজনের সমান|শূন্য|1|বেগ নিচের দিকে অথচ ত্বরণ ওপরের দিকে। তাই N−mg=ma এবং N>mg।
+ঘর্ষণহীন টেবিলে ঘূর্ণায়মান কণার সুতা কেন্দ্রের সরু ছিদ্র দিয়ে টেনে তার বৃত্তাকার পথের ব্যাসার্ধ অর্ধেক করা হলো। প্রাথমিক ও চূড়ান্ত অবস্থায় বেগ স্পর্শকমুখী। কোনটি সঠিক?|কৌণিক ভরবেগ স্থির, গতিশক্তি চার গুণ|কৌণিক ভরবেগ দ্বিগুণ, গতিশক্তি স্থির|কৌণিক ভরবেগ স্থির, গতিশক্তি দ্বিগুণ|ভরবেগ ও গতিশক্তি উভয়ই স্থির|1|টান কেন্দ্রমুখী বলে কেন্দ্রের সাপেক্ষে টর্ক শূন্য। mvr স্থির থাকায় v দ্বিগুণ ও ½mv² চার গুণ হয়। সুতা টানার সময় টানের কাজ থেকেই শক্তি বাড়ে।
+একটি রাবার বল দেয়ালে আঘাত করে আগের দ্রুতিতেই লম্বভাবে ফিরে আসে। সংঘর্ষকাল দ্বিগুণ হলে একই ভরবেগ পরিবর্তনের জন্য গড় বলের মান কী হয়?|দ্বিগুণ|চার গুণ|অপরিবর্তিত|অর্ধেক|4|ঘাত Fগড়Δt=Δp। Δp একই রেখে সময় দ্বিগুণ করলে গড় বল অর্ধেক হয়।
+পানিতে সম্পূর্ণ নিমজ্জিত একটি অনমনীয়, বন্ধ ধাতব বাক্স আরও গভীরে নেওয়া হলো। পানি অসংকোচনীয়। কোনটি ঘটবে?|চাপ বাড়বে, প্লবতা স্থির থাকবে|চাপ ও প্লবতা উভয়ই বাড়বে|প্লবতা কমবে|চাপ স্থির, প্লবতা বাড়বে|1|গভীরতার সঙ্গে চাপ বাড়ে। কিন্তু স্থানচ্যুত পানির আয়তন ও ঘনত্ব অপরিবর্তিত থাকায় প্লবতা ρgV স্থির।
+স্থির দৈর্ঘ্যের তারে উভয় প্রান্ত স্থির। তৃতীয় হারমোনিকে প্রান্ত দুটি বাদে কয়টি নিস্পন্দ বিন্দু থাকে?|২|৩|৪|১|1|তৃতীয় হারমোনিকে তিনটি অর্ধতরঙ্গ থাকে। মোট চারটি নিস্পন্দ বিন্দুর দুটি প্রান্তে।
+একটি আদর্শ গ্যাসকে তাপরোধী পাত্রে শূন্যস্থানে মুক্ত প্রসারণ করতে দেওয়া হলো। কোন জোড়াটি সঠিক?|ΔU<০, ΔT<০|Q>০, W=০|Q=০, W>০|ΔU=০, ΔT=০|4|তাপ বিনিময় নেই, বিপরীত চাপও শূন্য। প্রথম সূত্রে ΔU=০। আদর্শ গ্যাসে U শুধু তাপমাত্রার ওপর নির্ভরশীল।
+একটি বাস্তব গ্যাসকে আদর্শ গ্যাস হিসেবে ধরার সবচেয়ে উপযুক্ত অবস্থা কোনটি?|তরলীকরণের ঠিক আগে|নিম্ন চাপ ও উচ্চ তাপমাত্রা|উচ্চ চাপ ও সংকট তাপমাত্রা|উচ্চ চাপ ও নিম্ন তাপমাত্রা|2|অণুগুলোর গড় দূরত্ব বাড়লে নিজস্ব আয়তনের প্রভাব কমে। উচ্চ তাপমাত্রায় আন্তঃআণবিক আকর্ষণের আপেক্ষিক প্রভাবও কম।
+স্থির তড়িৎ সাম্যে একটি পরিবাহীর পৃষ্ঠের ঠিক বাইরের তড়িৎক্ষেত্র পৃষ্ঠের লম্ব হয় কেন?|বিভব সর্বত্র শূন্য|স্পর্শকীয় উপাংশ থাকলে মুক্ত আধান চলত|পৃষ্ঠে কোনো আধান নেই|পরিবাহীর রোধ অসীম|2|স্থির সাম্যে পৃষ্ঠ বরাবর নিট আধানপ্রবাহ থাকতে পারে না। তাই ক্ষেত্রের স্পর্শকীয় উপাংশ শূন্য।
+একটি ইলেকট্রন সুষম চৌম্বকক্ষেত্রে ক্ষেত্রের সঙ্গে ৩০° কোণে প্রবেশ করে। অন্য বল নেই। পথ ও দ্রুতি কেমন হবে?|সরল, দ্রুতি স্থির|বৃত্তাকার, দ্রুতি বাড়বে|পরাবৃত্তাকার, দ্রুতি কমবে|হেলিক্যাল, দ্রুতি স্থির|4|সমান্তরাল বেগ স্থির থাকে, লম্ব উপাংশ বৃত্তীয় গতি দেয়। চৌম্বক বল কাজ করে না।
+একটি বদ্ধ তারের লুপে আবিষ্ট প্রবাহের দিক যদি মূল ফ্লাক্সের পরিবর্তনকে আরও বাড়াত, কোন নীতিটি সরাসরি লঙ্ঘিত হতো?|আধান সংরক্ষণ|পাউলির বর্জন নীতি|আলোর প্রতিফলন|শক্তি সংরক্ষণ|4|লেনজের সূত্র পরিবর্তনকে বাধা দেয়। উল্টো হলে বাইরের কাজ ছাড়াই পরিবর্তন ও বৈদ্যুতিক শক্তি বাড়তে পারত।
+একক চিরে একবর্ণী আলোর অপবর্তনে চিরের প্রস্থ অর্ধেক করলে দূরের পর্দায় কেন্দ্রীয় উজ্জ্বল ডোরার প্রস্থ কত হয়? ক্ষুদ্র কোণ ধরুন।|চার গুণ|একই|দ্বিগুণ|অর্ধেক|3|প্রথম অন্ধকারের জন্য a sinθ=λ। কেন্দ্রীয় প্রস্থ প্রায় ২Dλ/a।
+একটি আলোকরশ্মি কাচ থেকে বায়ুতে যাচ্ছে। আপতন কোণ সংকট কোণের ঠিক সমান হলে প্রতিসরিত রশ্মি কোন দিকে যাবে?|অভিলম্ব বরাবর|আপতিত পথেই ফিরে যাবে|কাচের ভেতরে অভিলম্বের দিকে|বিভেদতল বরাবর|4|সংকট কোণে প্রতিসরণ কোণ ৯০° হয়। পূর্ণ অভ্যন্তরীণ প্রতিফলনের জন্য এর চেয়ে বড় আপতন কোণ লাগে।
+একটি p–n জাংশন ডায়োডকে সম্মুখ বায়াস দিলে নিঃশেষিত স্তর ও বিভব বাধার কী হয়?|উভয়ই কমে|প্রস্থ কমে, বাধা বাড়ে|উভয়ই বাড়ে|প্রস্থ বাড়ে, বাধা কমে|1|বাহ্যিক ক্ষেত্র জাংশনের নিজস্ব ক্ষেত্রের বিপরীতে কাজ করে। সংখ্যাগরিষ্ঠ বাহক জাংশনের দিকে এগোয়।
+একটি ধাতুতে আপতিত আলোর কম্পাঙ্ক সীমা কম্পাঙ্কের নিচে। সাধারণ এক-ফোটন প্রক্রিয়ায় তীব্রতা বাড়ালে কী হবে?|সর্বোচ্চ গতিশক্তি বাড়বে|কার্যাপেক্ষক কমে যাবে|আলোক-ইলেকট্রন নির্গত হবে না|নিবৃত্তি বিভব দ্বিগুণ হবে|3|প্রতিটি ফোটনের শক্তি hν কার্যাপেক্ষকের চেয়ে কম। তীব্রতা বাড়িয়ে ফোটনের সংখ্যা বাড়ানো যায়, প্রতিটির শক্তি নয়।
+ভর m ও ৪m-এর দুটি কণার ভরবেগ সমান। অনাপেক্ষিক ক্ষেত্রে তাদের গতিশক্তির অনুপাত Kₘ : K₄ₘ কত?|২ : ১|১ : ৪|৪ : ১|১ : ২|3|K=p²/(২m)। একই ভরবেগে গতিশক্তি ভরের ব্যস্তানুপাতিক।
+নাইট্রোজেনের প্রথম আয়নীকরণ শক্তি অক্সিজেনের চেয়ে বেশি হওয়ার প্রধান কারণ কোনটি?|N-এর নিউক্লীয় আধান বেশি|O-এর 2p উপস্তর পূর্ণ|N-এর 2p উপস্তর অর্ধপূর্ণ|N-এ বেশি ইলেকট্রন স্তর আছে|3|N-এর 2p³ বিন্যাসে তিনটি অরবিটালে একটি করে ইলেকট্রন। O-এর 2p⁴-এ যুগল বিকর্ষণ থাকায় একটি ইলেকট্রন সরানো তুলনামূলক সহজ।
+BF₃ ও NH₃ অণু যুক্ত হতে পারে কেন?|B একটি ইলেকট্রন জোড় দেয়|উভয় অণুই প্রোটন দেয়|N-এর নিঃসঙ্গ ইলেকট্রনজোড় B-এর খালি অরবিটালে যায়|F থেকে H⁺ স্থানান্তর হয়|3|BF₃ লুইস অ্যাসিড এবং NH₃ লুইস ক্ষার। N→B সন্নিবেশ বন্ধন গঠিত হয়।
+BF₃ ও NF₃ উভয় অণুতেই তিনটি পোলার বন্ধন আছে। কোন যুক্তিটি এদের নিট দ্বিমেরু ভ্রামকের পার্থক্য ব্যাখ্যা করে?|NF₃ সমতল, কিন্তু BF₃ পিরামিডীয়|উভয় অণুতেই তিনটি বন্ধন বলে নিট ভ্রামক শূন্য|BF₃ সমতল ত্রিভুজাকার বলে বন্ধন ভ্রামক বাতিল হয়, NF₃ পিরামিডীয় বলে সম্পূর্ণ বাতিল হয় না|BF₃-এ B–F বন্ধন অপোলার|3|BF₃-এ বন্ধনগুলো একই সমতলে ১২০° কোণে থাকে। NF₃-এ কেন্দ্রীয় N-এর নিঃসঙ্গ জোড় থাকায় তিনটি বন্ধন একই সমতলে এমনভাবে সজ্জিত হয় না।
+একটি বিক্রিয়ায় অনুঘটক যোগ করে একই তাপমাত্রায় সাম্য দ্রুত পাওয়া গেল। কোন রাশিটি অপরিবর্তিত থাকে?|সাম্যে পৌঁছানোর সময়|সাম্য ধ্রুবক|সক্রিয়ণ শক্তি|প্রাথমিক সম্মুখ হার|2|অনুঘটক উভয় দিকের জন্য বিকল্প পথ দেয়। বিক্রিয়ার ΔG° এবং নির্দিষ্ট তাপমাত্রায় K বদলায় না।
+N₂+৩H₂ ⇌ ২NH₃ সাম্যে আদর্শ গ্যাসের মিশ্রণে স্থির আয়তন ও তাপমাত্রায় Ar যোগ করা হলো। কী ঘটবে?|বামে সরবে|সাম্যের অবস্থান বদলাবে না|ডানে সরবে|K দ্বিগুণ হবে|2|প্রতিটি বিক্রিয়াশীল গ্যাসের আংশিক চাপ nRT/V অপরিবর্তিত। ফলে বিক্রিয়া ভাগফলও অপরিবর্তিত।
+সাম্যাবস্থায় কোনো বিক্রিয়ার ΔG ও ΔG° সম্পর্কে কোনটি সর্বদা সত্য?|ΔG° শূন্য, ΔG ধনাত্মক|দুটিই ঋণাত্মক|উভয়ই শূন্য|ΔG শূন্য, ΔG° নির্ভর করে K-এর ওপর|4|সাম্যে Q=K ও ΔG=০। ΔG°=−RT ln K, তাই শুধু K=১ হলে ΔG° শূন্য।
+CH₃COONa-এর জলীয় দ্রবণ ক্ষারীয় হয় কেন?|Na⁺ পানি থেকে OH⁻ সরায়|অ্যাসিটেট H⁺ দান করে|অ্যাসিটেট পানি থেকে প্রোটন গ্রহণ করে|লবণের সব অণু অবিয়োজিত থাকে|3|CH₃COO⁻+H₂O ⇌ CH₃COOH+OH⁻। দুর্বল অ্যাসিডের অনুবন্ধী ক্ষার হাইড্রোলাইসিস করে।
+একটি প্রাইমারি স্ট্যান্ডার্ড দিয়ে দ্রবণের ঘনমাত্রা নির্ণয় করতে হবে। কোন বৈশিষ্ট্যটি সবচেয়ে উপযোগী?|বাতাসে দ্রুত জারিত হয়|গঠন সময়ের সঙ্গে বদলায়|দ্রুত আর্দ্রতা শোষণ করে|বিশুদ্ধ, স্থিতিশীল ও বাতাসে অল্প আর্দ্রতাগ্রাহী|4|ওজন থেকে পদার্থের পরিমাণ নির্ভুলভাবে বের করতে ভর ও রাসায়নিক গঠন স্থির থাকা দরকার।
+গ্যালভানিক কোষে লবণসেতুর প্রধান কাজ কী?|আয়ন স্থানান্তরে অর্ধকোষে বৈদ্যুতিক নিরপেক্ষতা বজায় রাখা|ক্যাথোডে ধাতু গলানো|ইলেকট্রনকে সেতু দিয়ে পাঠানো|দুই তড়িৎদ্বারের বিভব সমান করা|1|বাহ্যিক বর্তনী দিয়ে ইলেকট্রন যায়। লবণসেতুর আয়ন জমে ওঠা আধানের ভারসাম্য রাখে।
+বেনজিন সাধারণ অবস্থায় সংযোজনের চেয়ে প্রতিস্থাপন বিক্রিয়ায় বেশি প্রবণ কেন?|বেনজিন সম্পূর্ণ আয়নিক|প্রতিস্থাপনের শেষে অ্যারোমেটিক স্থিতিশীলতা ফিরে আসে|কোনো π ইলেকট্রন নেই|সব কার্বন sp³|2|প্রতিস্থাপনে শেষ ধাপে বিস্তৃত π ব্যবস্থা পুনর্গঠিত হয়। সংযোজন সাধারণত সেই সুবিধা নষ্ট করে।
+ইথানলের স্ফুটনাঙ্ক একই আণবিক সংকেতের ডাইমিথাইল ইথারের তুলনায় বেশি কেন?|ইথানলের মোলার ভর বেশি|ইথানল আয়নিক|ইথানল অণুগুলোর মধ্যে হাইড্রোজেন বন্ধন হয়|ইথারে অক্সিজেন নেই|3|ইথানলের O–H বন্ধন হাইড্রোজেন বন্ধনের দাতা। বিশুদ্ধ ডাইমিথাইল ইথারে এমন দাতা নেই।
+CH₃CH=CHCH₃ অণুতে cis–trans সমাণুতা সম্ভব, কিন্তু CH₂=CHCH₂CH₃ অণুতে সম্ভব নয় কেন?|বিউট-১-ইনের দ্বিবন্ধন অবাধে ঘোরে|বিউট-২-ইন শাখাযুক্ত|বিউট-২-ইনে দ্বিবন্ধন নেই|বিউট-১-ইনের প্রান্তীয় দ্বিবন্ধিত কার্বনে দুটি H আছে|4|জ্যামিতিক সমাণুতার জন্য দ্বিবন্ধনের প্রতিটি কার্বনে দুটি পৃথক প্রতিস্থাপক লাগে। CH₂= প্রান্ত এই শর্ত পূরণ করে না।
+একটি বিক্রিয়ার হার v=k[A]²। ঘনমাত্রার একক mol L⁻¹ ও সময়ের একক s হলে k-এর একক কী?|s⁻¹|L² mol⁻² s⁻¹|mol L⁻¹ s⁻¹|L mol⁻¹ s⁻¹|4|k=v/[A]²। একক ভাগ করলে (mol L⁻¹ s⁻¹)/(mol² L⁻²)=L mol⁻¹ s⁻¹।
+০.১০ mol অনুদ্বায়ী, অবিয়োজী দ্রব্য ০.৯০ mol আদর্শ উদ্বায়ী দ্রাবকে মেশানো হলো। বাষ্পচাপের আপেক্ষিক অবনমন কত?|০.৯০|০.১০|১.০০|০.০৯|2|রাউল্টের সূত্রে (P°−P)/P° দ্রবের মোল ভগ্নাংশের সমান, অর্থাৎ ০.১০/১.০০।
+একটি বিক্রিয়ায় ΔH<০ ও ΔS<০। এই রাশি দুটি তাপমাত্রার সঙ্গে স্থির ধরে কোন অবস্থায় বিক্রিয়াটি স্বতঃস্ফূর্ত?|সব তাপমাত্রায়|কোনো তাপমাত্রাতেই নয়|শুধু উচ্চ তাপমাত্রায়|যখন T < ΔH/ΔS|4|ΔG=ΔH−TΔS। এখানে −TΔS ধনাত্মক। তাই কম তাপমাত্রায় ঋণাত্মক ΔH প্রাধান্য পায়।
+x²−৪x+k=০-এর দুটি ভিন্ন ধনাত্মক মূল α, β। α²+β²=১০ হলে কোন যুগলটি সঠিক?|k=২ এবং ∣α−β∣=√৬|k=৩ এবং ∣α−β∣=√১০|k=৬ এবং ∣α−β∣=২|k=৩ এবং ∣α−β∣=২|4|α+β=৪ ও αβ=k। তাই ১৬−২k=১০ থেকে k=৩। (α−β)²=১৬−৪×৩=৪। মূল ১ ও ৩ শর্ত পূরণ করে।
+z=x+iy এবং z²=−৭+২৪i। x>০ হলে x+y কত?|৭|−৭|৫|১|1|x²−y²=−৭, ২xy=২৪ এবং x²+y²=২৫। তাই x=৩, y=৪।
+A ও B দুটি ৩×৩ ম্যাট্রিক্স, det A=২ এবং det B=−৩। det(২AB) কত?|−৪৮|−২৪|৪৮|−১২|1|তৃতীয় ক্রমে স্কেলার ২-এর জন্য গুণক ২³। det(২AB)=৮×২×(−৩)=−৪৮।
+০<θ<π/২ ও tanθ+cotθ=৪। sin2θ কত?|১|১/২|১/৪|√৩/২|2|tanθ+cotθ=১/(sinθ cosθ)=২/sin2θ।
+P(৩,৪) দিয়ে যাওয়া রেখাটি ধনাত্মক অক্ষদ্বয়কে যথাক্রমে (a,০) ও (০,b)-তে ছেদ করে। অক্ষদ্বয় ও রেখাটি দিয়ে গঠিত ত্রিভুজের সর্বনিম্ন ক্ষেত্রফল কত?|১২|২৪|১৮|৪৮|2|৩/a+৪/b=১। AM–GM থেকে ১≥২√(১২/ab), তাই ab≥৪৮। সমতা হয় a=৬, b=৮ হলে। সর্বনিম্ন ক্ষেত্রফল ab/২=২৪।
+y²=১২x পরাবৃত্তে যে বিন্দুতে স্পর্শকের ঢাল ৩, তার স্থানাঙ্ক কত?|(১,২)|(১/৩,২)|(৩,৬)|(১/৩,−২)|2|২yy′=১২। y′=৩ দিলে y=২। ফলে x=৪/১২=১/৩।
+x²/১৬−y²/৯=১ অধিবৃত্তের অসীমতটদ্বয়ের ঢালের গুণফল কত?|৯/১৬|−১|−৯/১৬|−১৬/৯|3|অসীমতট y=±(৩/৪)x। ঢালের গুণফল −৯/১৬।
+f(x)=ax²+bx যখন x≤১ এবং f(x)=৩x−১ যখন x>১। x=১-এ অন্তরযোগ্য হলে (a,b) কোনটি?|(০,২)|(২,০)|(১,১)|(−১,৩)|3|অবিচ্ছিন্নতার জন্য a+b=২। ঢাল সমান হতে ২a+b=৩। বিয়োগ করে a=১, b=১।
+x>০ হলে f(x)=x²+২/x-এর সর্বনিম্ন মান কত?|৩|৩√২|২|৪|1|f′=২x−২/x² শূন্য হয় x=১-এ। f″=২+৪/x³>০, তাই সর্বনিম্ন f(১)=৩।
+∫₀^(π/৪) tan²x dx কত?|π/৪−১|π/৪|১−π/৪|১+π/৪|3|tan²x=sec²x−১। মূল ফাংশন tan x−x, তাই ফল ১−π/৪।
+রেখা y=kx, y=x² বক্ররেখার সঙ্গে ০ ও k বিন্দুতে (x-স্থানাঙ্ক) ছেদ করে। k>০ ও আবদ্ধ ক্ষেত্রফল ৪/৩ হলে k কত?|২|৪|৩|১|1|ক্ষেত্রফল ∫₀ᵏ(kx−x²)dx=k³/৬। k³=৮ থেকে k=২।
+a=(১,২,−১), b=(২,−১,১)। a-এর ওপর b-এর স্কেলার অভিক্ষেপ কত?|১/√৬|−১/৬|১/৬|−১/√৬|4|স্কেলার অভিক্ষেপ=(a·b)/‖a‖=(২−২−১)/√৬।
+একটি নিরপেক্ষ মুদ্রা চারবার নিক্ষেপে অন্তত একটি হেড এসেছে জানা গেল। ঠিক দুটি হেড পাওয়ার সম্ভাবনা কত?|৩/৮|১/২|২/৫|৫/৮|3|অন্তত একটি হেডের জন্য নমুনা ফল ১৬−১=১৫। ঠিক দুটি হেডের উপায় ⁴C₂=৬। ফল ৬/১৫।
+০,১,২,৩,৪ অঙ্ক থেকে পুনরাবৃত্তি ছাড়া কতটি তিন অঙ্কের জোড় সংখ্যা গঠন করা যায়?|৪৮|৩৬|৩০|২৪|3|এককে ০ হলে উপায় ৪×৩=১২। এককে ২ বা ৪ হলে প্রতিটির জন্য শতকে ৩ ও দশকে ৩ উপায়। মোট ১২+১৮=৩০।
+log₂(x−১)+log₂(x−৩)=৩ সমীকরণের বাস্তব সমাধান কোনটি?|৪|৫|−১ ও ৫|−১|2|ডোমেন x>৩। (x−১)(x−৩)=৮ থেকে x²−৪x−৫=০। ৫ ও −১-এর মধ্যে শুধু ৫ গ্রহণযোগ্য।
+একটি সদ্য বিভাজিত কোষ পরবর্তী S পর্যায় শেষ করল। G₁-এর তুলনায় কী পরিবর্তন প্রত্যাশিত?|ক্রোমোজোম অর্ধেক, DNA স্থির|ক্রোমোজোম ও DNA উভয় দ্বিগুণ|ক্রোমোজোম দ্বিগুণ, DNA স্থির|ক্রোমোজোম সংখ্যা স্থির, DNA দ্বিগুণ|4|S পর্যায়ে DNA প্রতিলিপি হয়ে সিস্টার ক্রোমাটিড গঠিত হয়। সেন্ট্রোমিয়ার পৃথক না হওয়ায় ক্রোমোজোম সংখ্যা বদলায় না।
+কোষে রাইবোসোমের গঠনগত উপএকক তৈরির সঙ্গে কোন অংশটি সবচেয়ে সরাসরি যুক্ত?|নিউক্লিওলাস|পারঅক্সিসোম|লাইসোসোম|সেন্ট্রিওল|1|নিউক্লিওলাসে অধিকাংশ rRNA তৈরি ও প্রক্রিয়াকরণ হয় এবং রাইবোসোমীয় প্রোটিনের সঙ্গে উপএকক গঠিত হয়।
+একটি উদ্ভিদকোষে হাইপারটনিক দ্রবণ দেওয়ার পরে প্রোটোপ্লাস্ট কোষপ্রাচীর থেকে সরে গেল। কোন ব্যাখ্যাটি সঠিক?|সক্রিয় পরিবহনে শুধু লবণ বের হয়েছে|বহিঃঅভিস্রবণে পানি কমে প্রোটোপ্লাস্ট সংকুচিত হয়েছে|পানি ঢুকে স্ফীতি ঘটেছে|এন্ডোসাইটোসিসে প্রাচীর ভেঙেছে|2|বাইরের পানি বিভব কম হলে পানি কোষ থেকে বের হয়। দৃঢ় প্রাচীরের ভেতরে প্রোটোপ্লাস্ট সঙ্কুচিত হওয়াই প্লাজমোলাইসিস।
+দুটি জীবিত উদ্ভিদকোষ A ও B সংস্পর্শে আছে। A-তে দ্রব বিভব −০.৭ ও চাপ বিভব +০.৪ MPa; B-তে যথাক্রমে −০.৫ ও +০.১ MPa। শুরুতে নিট পানি চলাচলের দিক কোনটি?|B থেকে A, কারণ A-তে দ্রব বেশি|B থেকে A, কারণ B-এর চাপ বিভব কম|A থেকে B, কারণ A-এর মোট পানি বিভব বেশি|কোনো নিট প্রবাহ হবে না|3|A-এর পানি বিভব −০.৩ MPa, B-এর −০.৪ MPa। পানি উচ্চতর থেকে নিম্নতর মোট পানি বিভবে যায়। শুধু দ্রব বিভব তুলনা করলে সিদ্ধান্ত ভুল হবে।
+তীব্র আলোতে উদ্ভিদের পত্ররন্ধ্র দীর্ঘক্ষণ বন্ধ থাকলে C₃ পাতায় আলোকশ্বসনের আপেক্ষিক হার বাড়তে পারে কেন?|পাতায় CO₂/O₂ অনুপাত কমে|রাতেই শুধু অক্সিজেন উৎপন্ন হয়|রুবিসকো স্থায়ীভাবে নষ্ট হয়|PSII পানি ভাঙা বন্ধ করে|1|CO₂ প্রবেশ সীমিত হলে রুবিসকোর অক্সিজেনেজ বিক্রিয়া কার্বক্সিলেশনের তুলনায় বেশি অনুকূল হয়।
+আলোকিত কাণ্ডের এক পাশ ঢেকে দিলে কাণ্ড আলোর দিকে বাঁকে। সাধারণ মডেলে কোন ঘটনাটি এর কারণ?|দুই পাশে বৃদ্ধি সমান|ছায়াযুক্ত পাশে বেশি অক্সিনে কোষের দৈর্ঘ্য বেশি বাড়ে|আলোকিত পাশে অক্সিন বেশি, দৈর্ঘ্য কমে|আলোকিত পাশের সব কোষ মরে|2|কাণ্ডে অক্সিন কোষের দৈর্ঘ্য বৃদ্ধি ঘটায়। ছায়ার পাশ বেশি বাড়লে কাণ্ড আলোর দিকে বেঁকে যায়।
+ফার্নের প্রোথ্যালাসে শুক্রাণু ও ডিম্বাণু কী প্রক্রিয়ায় গঠিত হয় এবং কেন?|মিয়োসিসে, গ্যামেট ডিপ্লয়েড|মাইটোসিসে, প্রোথ্যালাস হ্যাপ্লয়েড|মিয়োসিসে, প্রোথ্যালাস ডিপ্লয়েড|নিষেকে, প্রোথ্যালাস স্পোরোফাইট|2|প্রোথ্যালাস হ্যাপ্লয়েড গ্যামেটোফাইট। তার গ্যামেট গঠনে নতুন করে ক্রোমোজোম সংখ্যা কমাতে হয় না।
+একটি ফুলে লাল × সাদা সংকরায়ণে সব F₁ গোলাপি। F₁ স্বপরাগায়ণে প্রত্যাশিত ফিনোটাইপিক অনুপাত কত? একটি জিন ধরুন।|৩ : ১|সব গোলাপি|১ লাল : ২ গোলাপি : ১ সাদা|৯ : ৩ : ৩ : ১|3|অসম্পূর্ণ প্রকটতায় হেটেরোজাইগোটের আলাদা ফিনোটাইপ থাকে। তাই জিনোটাইপ ও ফিনোটাইপ উভয়ের অনুপাত ১:২:১।
+একটি বংশলতিকায় স্বাভাবিক ফিনোটাইপের বাবা ও মায়ের সন্তান একটি অটোসোমাল প্রচ্ছন্ন বৈশিষ্ট্য প্রকাশ করেছে। নতুন মিউটেশন বাদ দিলে বাবা-মায়ের জিনোটাইপ কী?|উভয়েই প্রচ্ছন্ন হোমোজাইগোট|উভয়েই প্রকট হোমোজাইগোট|একজন প্রচ্ছন্ন হোমোজাইগোট|উভয়েই হেটেরোজাইগোট|4|সন্তান aa হওয়ায় প্রত্যেক জনিতার কাছ থেকে a পেয়েছে। স্বাভাবিক ফিনোটাইপ হওয়ায় উভয় জনিতাই Aa।
+পরিণত মানব লোহিত কণিকায় মাইটোকন্ড্রিয়া অনুপস্থিত থাকার একটি কার্যগত ফল কী?|পরিবাহিত সব O₂ নিজেই ব্যবহার করে|নিজের ATP মূলত গ্লাইকোলাইসিসে তৈরি করে|ATP একেবারেই তৈরি হয় না|শুধু ফ্যাটি অ্যাসিড জারিত করে|2|অক্সিডেটিভ ফসফরাইলেশন করতে না পারলেও লোহিত কণিকা অবাত গ্লাইকোলাইসিস থেকে ATP পায়।
+ক্ষুদ্রান্ত্রে পিত্তলবণ স্নেহপদার্থের পরিপাকে সহায়তা করে কীভাবে?|ক্ষুদ্র ফোঁটা তৈরি করে লাইপেজের কাজের ক্ষেত্র বাড়ায়|পেপসিনোজেন সক্রিয় করে|ট্রাইগ্লিসারাইড সরাসরি হাইড্রোলাইসিস করে|অ্যামিনো অ্যাসিড শোষণ বন্ধ করে|1|ইমালসিফিকেশনে বড় তেলবিন্দু ছোট ফোঁটায় বিভক্ত হয়। প্রকৃত হাইড্রোলাইসিস লাইপেজ করে।
+স্বাভাবিক অবস্থায় গ্লোমেরুলার পরিস্রুতে গ্লুকোজ থাকে, কিন্তু চূড়ান্ত মূত্রে সাধারণত থাকে না। প্রধান কারণ কোনটি?|গ্লুকোজ কখনও পরিস্রুত হয় না|মূত্রথলি গ্লুকোজ গ্রহণ করে|নিকটবর্তী প্যাঁচানো নালিকায় গ্লুকোজ পুনঃশোষিত হয়|বোম্যানের ক্যাপসুলে গ্লুকোজ ধ্বংস হয়|3|স্বাভাবিক রক্তঘনত্বে পরিস্রুত গ্লুকোজ প্রধানত প্রক্সিমাল টিউবিউলে সোডিয়াম-নির্ভর সহপরিবহনের মাধ্যমে পুনঃশোষিত হয়।
+মায়েলিনযুক্ত অ্যাক্সনে স্নায়ু আবেগ দ্রুত সঞ্চালিত হওয়ার কারণ কোনটি?|আবেগ রক্তের মধ্য দিয়ে যায়|সারা অ্যাক্সনে আয়ন চলাচল বন্ধ|র‍্যানভিয়ারের পর্বে পর্বে অ্যাকশন পটেনশিয়াল পুনর্গঠিত হয়|মায়েলিন নিজেই সর্বত্র অ্যাকশন পটেনশিয়াল তৈরি করে|3|পর্বের মাঝের মায়েলিনযুক্ত অঞ্চল দিয়ে স্থানীয় প্রবাহ দ্রুত ছড়ায়। পরবর্তী পর্বে নতুন অ্যাকশন পটেনশিয়াল তৈরি হয়।
+প্রাকৃতিক নির্বাচনে একই প্রজাতির জনসংখ্যায় কয়েক প্রজন্ম পরে কোনো বংশগত বৈশিষ্ট্যের হার বাড়ল। কোন শর্তটি সরাসরি এই পরিবর্তন ব্যাখ্যা করে?|অর্জিত সব বৈশিষ্ট্য উত্তরাধিকারসূত্রে যায়|প্রতিটি জীব চাহিদামতো অ্যালিল তৈরি করে|সকল সদস্যের আয়ু সমান|বৈশিষ্ট্যধারীরা গড়ে বেশি প্রজননক্ষম সন্তান রেখে যায়|4|নির্বাচনে বংশগত ভিন্নতার সঙ্গে প্রজননসাফল্যের পার্থক্য যুক্ত থাকে। ফলে পরবর্তী প্রজন্মে সংশ্লিষ্ট বৈশিষ্ট্যের হার বদলাতে পারে।
+একটি খাদ্যজালে শীর্ষ শিকারির দেহে দীর্ঘস্থায়ী, স্নেহদ্রবণীয় দূষকের ঘনত্ব বেশি পাওয়া গেল। কোন প্রক্রিয়াটি স্তরভেদে এই বৃদ্ধি ব্যাখ্যা করে?|প্রাথমিক উৎপাদন|জৈব বিবর্ধন|নাইট্রিফিকেশন|উত্তরাধিকারী অভিযোজন|2|দূষক সহজে অপসারিত না হলে বহু দূষিত শিকার খেয়ে উচ্চ ট্রফিক স্তরের প্রাণীর দেহে ঘনত্ব বেড়ে যায়।`;
+const questions=bank.split("\n").map(line=>{
+  const [stem,a,b,c,d,key,why]=line.split("|");
+  return {stem,options:[a,b,c,d],key:Number(key)-1,why};
+});
+// Per subject: two questions, five marks each.
+const papers=[
+  [
+    "একটি আদর্শ একপরমাণুক গ্যাস একই প্রাথমিক অবস্থা থেকে একই চূড়ান্ত আয়তন পর্যন্ত প্রসারিত হতে পারে দুটি বিপরীতযোগ্য পথে: সমোষ্ণ ও রুদ্ধতাপীয়। (ক) কোন পথে অভ্যন্তরীণ শক্তি অপরিবর্তিত এবং কেন [১]? (খ) রুদ্ধতাপীয় পথে তাপমাত্রার পরিবর্তন প্রথম সূত্র দিয়ে বুঝিয়ে লিখুন [২]। (গ) P–V লেখচিত্রে কোন পথটি ওপরে থাকবে এবং কোন পথে কাজ বেশি হবে, যুক্তি দিন [২]।",
+    "আদর্শ গ্যাসের U শুধু T-এর ফাংশন, তাই সমোষ্ণ পথে ΔU=০ [১]। রুদ্ধতাপীয় পথে Q=০ [১]; প্রসারণে গ্যাস কাজ করে, ফলে ΔU=−W<০ ও T কমে [১]। একই মধ্যবর্তী আয়তনে রুদ্ধতাপীয় পথে T কম বলে P কম; সমোষ্ণ রেখা ওপরে [১]। রেখার নিচের ক্ষেত্রফল ∫P dV, তাই সমোষ্ণ পথে কাজ বেশি [১]।"
+  ],
+  [
+    "একটি সমান্তরাল পাত ধারককে ব্যাটারির সঙ্গে যুক্ত রেখে পাতের দূরত্ব দ্বিগুণ করা হলো। প্রান্তীয় প্রভাব উপেক্ষা করুন। (ক) C ও Q-এর পরিবর্তন দেখান [২]। (খ) তড়িৎক্ষেত্র ও সঞ্চিত শক্তির পরিবর্তন লিখুন [২]। (গ) দূরত্ব বাড়ানোর আগে ব্যাটারি খুলে নিলে সঞ্চিত শক্তির পরিবর্তন উল্টো হতো কেন [১]?",
+    "C=εA/d থেকে C অর্ধেক [১]। ব্যাটারিতে V স্থির, তাই Q=CV অর্ধেক [১]। E=V/d অর্ধেক [১]। U=½CV² অর্ধেক [১]। বিচ্ছিন্ন ধারকে Q স্থির, তাই U=Q²/(২C) দ্বিগুণ; পাত আলাদা করতে বাহ্যিক কাজ লাগে [১]।"
+  ],
+  [
+    "একটি পাত্রে ২SO₂(g)+O₂(g) ⇌ ২SO₃(g), ΔH<০। সাম্য প্রতিষ্ঠার পর প্রতিবার প্রাথমিক সাম্য থেকে আলাদাভাবে পরিবর্তন আনা হয়। (ক) তাপমাত্রা বাড়ালে K ও SO₃-এর সাম্য পরিমাণ কীভাবে বদলাবে [২]? (খ) তাপমাত্রা স্থির রেখে আয়তন অর্ধেক করার ঠিক পরে বিক্রিয়া ভাগফল Qp-কে Kp দিয়ে প্রকাশ করে সাম্য সরণের দিক দেখান [২]। (গ) অনুঘটক দিয়ে উৎপাদনের হার বাড়ালেও সাম্য ফলন কেন বাড়ে না [১]?",
+    "তাপ বাড়ালে উষ্মাশোষী বিপরীত বিক্রিয়া অনুকূল; K কমে [১] এবং SO₃-এর সাম্য পরিমাণ কমে [১]। সংকোচনের ঠিক পর সব আংশিক চাপ দ্বিগুণ। Qp′=(২²/২³)Kp=Kp/২ [১]। Qp′<Kp বলে সাম্য ডানে সরে [১]। অনুঘটক উভয় দিকের বিক্রিয়া দ্রুত করে, নির্দিষ্ট T-তে K বদলায় না [১]।"
+  ],
+  [
+    "একই তাপমাত্রায় ০.১০ M HCl ও ০.১০ M CH₃COOH-এর সমান আয়তনের দুটি দ্রবণ আছে। (ক) কোনটির প্রাথমিক পরিবাহিতা বেশি এবং কেন [২]? (খ) অতিরিক্ত পানি যোগে CH₃COOH-এর আয়নিত ভগ্নাংশ ও প্রতি একক আয়তনে H⁺-এর ঘনমাত্রা কোন দিকে বদলায়, বুঝিয়ে লিখুন [২]। (গ) দুটি মূল নমুনাকে সম্পূর্ণ প্রশমনে একই ঘনমাত্রার NaOH-এর প্রয়োজনীয় আয়তন তুলনা করুন [১]।",
+    "HCl-এর পরিবাহিতা বেশি [১]; এটি প্রায় সম্পূর্ণ আয়নিত, CH₃COOH আংশিক আয়নিত [১]। লঘুকরণে দুর্বল অ্যাসিডের আয়নিত ভগ্নাংশ বাড়ে [১]। তবু একক আয়তনে H⁺ কমে; দুর্বল অ্যাসিডের ক্ষেত্রে আনুমানিক [H⁺]=√(KaC) [১]। উভয়ই একপ্রোটিক এবং মূল নমুনায় মোল সমান, তাই NaOH-এর আয়তন সমান [১]।"
+  ],
+  [
+    "বৃত্ত x²+y²−৬x+৪y−১২=০ ও বিন্দু P(১০,−১) দেওয়া আছে। (ক) কেন্দ্র ও ব্যাসার্ধ নির্ণয় করুন [১]। (খ) P থেকে অঙ্কিত স্পর্শকের দৈর্ঘ্য নির্ণয় করুন [১]। (গ) P দিয়ে যাওয়া স্পর্শক দুটির সমীকরণ নির্ণয় করুন [৩]।",
+    "বৃত্ত (x−৩)²+(y+২)²=২৫; কেন্দ্র (৩,−২), r=৫ [১]। CP²=৭²+১²=৫০, স্পর্শকের দৈর্ঘ্য √(৫০−২৫)=৫ [১]। রেখা y+১=m(x−১০); উল্লম্ব রেখা x=১০ কেন্দ্র থেকে ৭ দূরে বলে স্পর্শক নয় [১]। কেন্দ্র থেকে দূরত্বের শর্ত (১−৭m)²=২৫(১+m²) [১]। ১২m²−৭m−১২=০ থেকে m=৪/৩ অথবা −৩/৪। স্পর্শক y+১=(৪/৩)(x−১০) ও y+১=−(৩/৪)(x−১০) [১]।"
+  ],
+  [
+    "বক্ররেখা y=৪−x² ও x-অক্ষ দ্বারা আবদ্ধ অঞ্চলে একটি আয়তক্ষেত্র আঁকা হলো। এর ভূমি x-অক্ষের ওপর এবং ওপরের দুই শীর্ষ বক্ররেখায়। (ক) ডান ওপরের শীর্ষের x-স্থানাঙ্ক t ধরে ক্ষেত্রফলের সূত্র ও t-এর সীমা দিন [১]। (খ) সর্বাধিক ক্ষেত্রফলের জন্য t নির্ণয় ও সর্বাধিকত্ব যাচাই করুন [২]। (গ) সর্বাধিক ক্ষেত্রফল এবং সেটি সম্পূর্ণ আবদ্ধ অঞ্চলের ক্ষেত্রফলের কত অংশ, নির্ণয় করুন [২]।",
+    "সমমিতিতে প্রস্থ ২t, উচ্চতা ৪−t²। A=২t(৪−t²), ০<t<২ [১]। A′=৮−৬t²=০ থেকে t=২/√৩ [১]। A″=−১২t<০; প্রান্তে ক্ষেত্রফল শূন্য [১]। Amax=৩২/(৩√৩) [১]। সম্পূর্ণ অঞ্চল ∫₋₂²(৪−x²)dx=৩২/৩; অনুপাত ১/√৩ [১]।"
+  ],
+  [
+    "একই প্রজাতির সমবয়সী দুটি চারার একটির মূলের চারপাশে দীর্ঘক্ষণ পানি জমে আছে, অন্যটির মাটি আর্দ্র ও বায়ুচলাচলযোগ্য। মাটিতে খনিজের পরিমাণ সমান। (ক) জলাবদ্ধ মাটিতে মূলের বায়বীয় শ্বসন কমতে পারে কেন [১]? (খ) এর সঙ্গে খনিজ আয়নের সক্রিয় শোষণের সম্পর্ক ব্যাখ্যা করুন [২]। (গ) দ্রবণ থেকে ঘনত্ব প্রবণতার বিপরীতে আয়ন প্রবেশ এবং পানি প্রবেশের চালিকাশক্তি তুলনা করুন [২]।",
+    "মাটির বায়ুফাঁক পানিতে পূর্ণ হলে অক্সিজেন সরবরাহ ধীর হয় [১]। অক্সিজেন সীমিত হলে বায়বীয় শ্বসনে ATP উৎপাদন কমে [১]; ATP-চালিত পাম্প ও তার সৃষ্ট তড়িৎরাসায়নিক প্রবণতার ওপর নির্ভরশীল খনিজ শোষণ কমতে পারে [১]। আয়নকে তার তড়িৎরাসায়নিক প্রবণতার বিপরীতে নিতে প্রত্যক্ষ বা পরোক্ষ শক্তি লাগে [১]। পানি অর্ধভেদ্য ঝিল্লি পেরিয়ে উচ্চ থেকে নিম্ন পানি বিভবে অভিস্রবণে যায় [১]।"
+  ],
+  [
+    "ফুলের রঙ একটি জিনজোড়া দ্বারা নিয়ন্ত্রিত। দুটি খাঁটি জাতের সংকরায়ণে F₁-এ সব ফুল বেগুনি; F₁-এর স্বপরাগায়ণে ১৮০টি বেগুনি ও ৬০টি সাদা ফুল পাওয়া গেল। (ক) প্রকটতার ধরন ও F₁ জিনোটাইপ লিখুন [১]। (খ) F₂-তে বেগুনি ফুলের মধ্য থেকে দৈবচয়নে একটি নিলে সেটি বিশুদ্ধ হওয়ার সম্ভাবনা যুক্তিসহ নির্ণয় করুন [২]। (গ) একটি বেগুনি উদ্ভিদের জিনোটাইপ যাচাইয়ের সংকরায়ণ ও সম্ভাব্য ফল লিখুন [২]।",
+    "পূর্ণ প্রকটতা; P বেগুনি হলে F₁=Pp [১]। F₂-তে PP:Pp:pp=১:২:১ [১]। বেগুনি গোষ্ঠীতে PP:Pp=১:২, তাই বেগুনি শর্তে PP হওয়ার সম্ভাবনা ১/৩ [১]। সাদা pp-এর সঙ্গে টেস্ট ক্রস করতে হবে [১]। PP হলে সব বেগুনি; Pp হলে বেগুনি:সাদা প্রত্যাশিত অনুপাত ১:১। অল্প নমুনায় পর্যবেক্ষিত অনুপাত বিচ্যুত হতে পারে [১]।"
+  ]
+];
+const KEY="du-science-04-standalone-v1", PERIOD=45*60*1000;
+const letters=["ক","খ","গ","ঘ"];
+const $=id=>document.getElementById(id);
+const app=$("app");
+const bn=n=>Number(n).toLocaleString("bn-BD",{useGrouping:false});
+const escapeHTML=value=>String(value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+let state=null, sending=false, photoBusy=false;
+function warn(message){$("warning").textContent=message}
+function save(){
+  try{localStorage.setItem(KEY,JSON.stringify(state));warn("");return true}
+  catch{warn("ব্রাউজারে সংরক্ষণ করা যায়নি। এই ট্যাব খোলা রাখুন।");return false}
+}
+function startPage(){
+  app.innerHTML='<section><small>ঢাবি বিজ্ঞান ইউনিট প্রস্তুতি</small><h1>মডেল টেস্ট ০৪</h1><p>পদার্থবিজ্ঞান · রসায়ন · উচ্চতর গণিত · জীববিজ্ঞান</p><p><b>৬০টি MCQ · ৪৫ মিনিট</b><br>৮টি লিখিত প্রশ্ন · ৪০ নম্বর · ৪৫ মিনিট</p><p>প্রতি সঠিক উত্তরে ১ নম্বর, ভুল উত্তরে ০.২৫ নম্বর কাটা হবে। ফাঁকা উত্তরে ০। MCQ জমা দিলে লিখিত পর্ব শুরু হবে। সময় শেষ হলেও উত্তর লক হবে।</p><p>এটি মৌলিক অনুশীলনী পরীক্ষা। লিখিত উত্তর টাইপ করুন অথবা প্রতি প্রশ্নে একটি ছবি দিন। শুরুর সময় নাম ও রোল শিক্ষকের কাছে পাঠানো হবে। চূড়ান্ত জমায় আপনার নাম, আইডি, MCQ ফল ও লিখিত উত্তর শিক্ষকের কাছে পাঠানো হবে। নিজের নম্বর পরে এই ডিভাইসে রাখতে পারবেন।</p><form id="entry"><label>নাম<br><input id="student" required maxlength="80" autocomplete="name"></label><label>শিক্ষার্থী আইডি<br><input id="roll" required maxlength="48"></label><button>পরীক্ষা শুরু করুন</button></form></section>';
+  $("entry").onsubmit=e=>{
+    e.preventDefault();
+    const name=$("student").value.trim(),id=$("roll").value.trim();
+    if(!name||!id){warn("নাম ও আইডি লিখুন।");return}
+    const now=Date.now();
+    state={attemptId:crypto.randomUUID?.()||now+"-"+Math.random().toString(36).slice(2),name,id,start:now,end:now+PERIOD,stage:"mcq",choices:Array(60).fill(null),writing:papers.map(()=>({text:"",photo:null})),marks:Array(8).fill(null),delivery:"pending"};
+    save();render();tick();void sendAttendance();
+  };
+}
+function scores(){
+  const subjects=SUBJECTS.map((subject,s)=>{
+    let correct=0,wrong=0,blank=0;
+    questions.slice(s*15,s*15+15).forEach((q,j)=>{
+      const a=state.choices[s*15+j];
+      if(a===null)blank++;else if(a===q.key)correct++;else wrong++;
+    });
+    return {subject,correct,wrong,blank,score:correct-wrong/4};
+  });
+  const sum=k=>subjects.reduce((v,s)=>v+s[k],0);
+  return {correct:sum("correct"),wrong:sum("wrong"),blank:sum("blank"),mcqScore:sum("score"),mcqMax:60,writtenScore:null,writtenMax:40,totalScore:null,totalMax:100,subjects};
+}
+function payload(){
+  const results=scores();
+  return {status:"Submitted",exam:"Model Test 04",attemptId:state.attemptId,name:state.name,id:state.id,
+    studentName:state.name,studentId:state.id,studentID:state.id,
+    totalQuestions:questions.length,score:results.mcqScore,results,startedAt:new Date(state.start).toISOString(),
+    writtenStartedAt:new Date(state.writtenAt).toISOString(),submittedAt:new Date(state.finished).toISOString(),reason:state.reason,
+    answers:{mcq:Object.fromEntries(state.choices.map((a,i)=>["Q"+(i+1),a===null?null:{option:letters[a],text:questions[i].options[a]}])),
+      written:Object.fromEntries(state.writing.map((a,i)=>["W"+(i+1),{text:a.text,photo:a.photo}]))}};
+}
+function openWritten(at){
+  state.stage="written";state.writtenAt=at;state.end=at+PERIOD;save();
+}
+function finish(at,reason){
+  if(state.stage!=="written")return;
+  state.stage="done";state.finished=at;state.reason=reason;
+  save();render();window.scrollTo(0,0);void send();
+}
+function tick(){
+  if(!state||state.stage==="done")return;
+  const now=Date.now();
+  if(state.stage==="mcq"&&now>=state.end){openWritten(state.end);render();window.scrollTo(0,0)}
+  if(state.stage==="written"&&now>=state.end){finish(state.end,"timeout");return}
+  const s=Math.max(0,Math.ceil((state.end-now)/1000));
+  $("clock").textContent=String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+}
+function active(stage){tick();return state?.stage===stage}
+function nav(){return '<nav>'+SUBJECTS.map((s,i)=>'<a href="#sub'+i+'">'+s+'</a>').join("")+'</nav>'}
+function examPage(){
+  const isMCQ=state.stage==="mcq";
+  let out='<section><small>'+escapeHTML(state.name)+' · '+escapeHTML(state.id)+'</small><h2>'+(isMCQ?"পর্ব ১ · বহুনির্বাচনি":"পর্ব ২ · লিখিত")+'</h2><p id="progress"></p>'+nav()+'</section>';
+  SUBJECTS.forEach((subject,s)=>{
+    out+='<h2 id="sub'+s+'">'+subject+'</h2>';
+    if(isMCQ){
+      questions.slice(s*15,s*15+15).forEach((q,j)=>{
+        const i=s*15+j;
+        out+='<article><b>'+bn(i+1)+'. '+escapeHTML(q.stem)+'</b>'+q.options.map((opt,k)=>'<label class="option"><input type="radio" name="q'+i+'" data-q="'+i+'" value="'+k+'" '+(state.choices[i]===k?"checked":"")+'> '+letters[k]+'. '+escapeHTML(opt)+'</label>').join("")+'<button class="secondary" data-clear="'+i+'">উত্তর মুছুন</button></article>';
+      });
+    }else{
+      papers.slice(s*2,s*2+2).forEach(([q],j)=>{
+        const i=s*2+j,a=state.writing[i];
+        out+='<article><b>'+bn(i+1)+'. '+q+'</b><label>লিখিত উত্তর<textarea maxlength="5000" data-text="'+i+'">'+escapeHTML(a.text)+'</textarea></label><label>খাতার ছবি <input type="file" accept="image/*" data-photo="'+i+'"></label><label>ক্যামেরায় তুলুন <input type="file" accept="image/*" capture="environment" data-photo="'+i+'"></label><div id="preview'+i+'"></div><button class="secondary" data-remove="'+i+'">ছবি সরান</button></article>';
+      });
+    }
+  });
+  app.innerHTML=out+'<button id="submit">'+(isMCQ?"MCQ জমা দিয়ে লিখিত শুরু করুন":"Submit Exam · পরীক্ষা জমা দিন")+'</button>';
+  if(isMCQ)progress();else{
+    $("progress").textContent="প্রতি প্রশ্ন ৫ নম্বর। টাইপ করা উত্তর ও সংরক্ষিত ছবি দুটোই পাঠানো হবে।";
+    papers.forEach((_,i)=>preview(i));
+  }
+  $("submit").onclick=()=>{
+    const expected=isMCQ?"mcq":"written";
+    if(!active(expected))return;
+    if(photoBusy){warn("ছবিটি প্রস্তুত হচ্ছে। একটু অপেক্ষা করুন।");return}
+    if(!confirm(isMCQ?"MCQ উত্তর লক করে লিখিত শুরু করবেন?":"সব উত্তর লক করে শিক্ষকের কাছে পাঠাবেন?"))return;
+    if(!active(expected))return;
+    if(isMCQ){openWritten(Date.now());render();tick();window.scrollTo(0,0)}
+    else finish(Date.now(),"manual");
+  };
+}
+function progress(){$("progress").textContent="উত্তর দেওয়া হয়েছে "+bn(state.choices.filter(a=>a!==null).length)+" / ৬০"}
+function preview(i){
+  const box=$("preview"+i);box.replaceChildren();
+  if(!state.writing[i].photo)return;
+  const img=new Image();img.alt="সংরক্ষিত উত্তর "+bn(i+1);img.src=state.writing[i].photo;box.append(img);
+}
+async function attach(i,file){
+  if(!file||photoBusy||!active("written"))return;
+  if(file.size>20*1024*1024){warn("২০ MB-এর ছোট ছবি দিন।");return}
+  photoBusy=true;warn("ছবি প্রস্তুত হচ্ছে…");
+  const url=URL.createObjectURL(file);
+  try{
+    const img=new Image();img.src=url;await img.decode();
+    const scale=Math.min(1,1800/Math.max(img.width,img.height));
+    const canvas=document.createElement("canvas");canvas.width=Math.max(1,Math.round(img.width*scale));canvas.height=Math.max(1,Math.round(img.height*scale));
+    const ctx=canvas.getContext("2d");ctx.fillStyle="white";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);
+    let data=canvas.toDataURL("image/jpeg",0.82);
+    if(data.length>420000)data=canvas.toDataURL("image/jpeg",0.54);
+    if(data.length>420000)throw Error("ছবিটি ক্রপ করে শুধু উত্তরের অংশ দিন।");
+    if(!active("written"))return;
+    const old=state.writing[i].photo;state.writing[i].photo=data;
+    if(!save()){state.writing[i].photo=old;warn("ছবি সংরক্ষণ করা যায়নি। ছোট ছবি দিন।");return}
+    preview(i);warn("ছবি সংরক্ষিত হয়েছে।");
+  }catch(e){warn(e.message?.includes("ক্রপ")?e.message:"ছবি পড়া যায়নি। JPG বা PNG দিন।")}
+  finally{photoBusy=false;URL.revokeObjectURL(url)}
+}
+app.addEventListener("input",e=>{
+  const t=e.target;
+  if(t.matches("[data-text]")&&active("written")){state.writing[Number(t.dataset.text)].text=t.value;save()}
+});
+app.addEventListener("change",e=>{
+  const t=e.target;
+  if(t.matches("[data-q]")&&active("mcq")){state.choices[Number(t.dataset.q)]=Number(t.value);save();progress()}
+  if(t.matches("[data-photo]")){const file=t.files[0];t.value="";void attach(Number(t.dataset.photo),file)}
+  if(t.matches("[data-mark]")&&state.stage==="done"){
+    const i=Number(t.dataset.mark);
+    if(!t.validity.valid){t.value=state.marks[i]??"";warn("০ থেকে ৫-এর মধ্যে ০.২৫ ধাপে নম্বর দিন।");return}
+    state.marks[i]=t.value===""?null:Number(t.value);save();selfSummary();
+  }
+});
+app.addEventListener("click",e=>{
+  const t=e.target;
+  if(t.matches("[data-clear]")&&active("mcq")){
+    const i=Number(t.dataset.clear);state.choices[i]=null;
+    app.querySelectorAll('[name="q'+i+'"]').forEach(r=>r.checked=false);save();progress();
+  }
+  if(t.matches("[data-remove]")&&!photoBusy&&active("written")){
+    const i=Number(t.dataset.remove);state.writing[i].photo=null;save();preview(i);
+  }
+});
+function selfSummary(){
+  const count=state.marks.filter(n=>n!==null).length;
+  const total=state.marks.reduce((v,n)=>v+(n??0),0);
+  $("self").textContent="স্ব-মূল্যায়ন "+bn(count)+"/৮ · লিখিত "+bn(total)+"/৪০"+(count===8?" · মোট "+bn(scores().mcqScore+total)+"/১০০":"");
+}
+function resultPage(){
+  const r=scores();
+  app.innerHTML='<section><small>'+escapeHTML(state.name)+' · '+escapeHTML(state.id)+'</small><h1>ফলাফল</h1><h2>MCQ '+bn(r.mcqScore)+' / ৬০</h2><p>সঠিক '+bn(r.correct)+' · ভুল '+bn(r.wrong)+' · ফাঁকা '+bn(r.blank)+'</p><table><tr><th>বিষয়</th><th>MCQ / ১৫</th></tr>'+r.subjects.map(s=>'<tr><td>'+s.subject+'</td><td>'+bn(s.score)+'</td></tr>').join("")+'</table><div id="network" role="status"></div><p id="self"></p><small>লিখিত নম্বর নিজের অনুশীলনের জন্য এই ডিভাইসে থাকে।</small><div class="controls"><button onclick="window.print()">প্রিন্ট / PDF</button><button id="restart" class="secondary">নতুন প্রচেষ্টা</button></div></section><h2>বহুনির্বাচনি উত্তরপত্র</h2>'+questions.map((q,i)=>{
+    const a=state.choices[i];
+    return '<article><b>'+bn(i+1)+'. '+escapeHTML(q.stem)+'</b><p>আপনার উত্তর · '+(a===null?"ফাঁকা":letters[a]+'. '+escapeHTML(q.options[a]))+'</p><p><strong>সঠিক · '+letters[q.key]+'. '+escapeHTML(q.options[q.key])+'</strong></p><p>'+escapeHTML(q.why)+'</p></article>';
+  }).join("")+'<h2>লিখিত উত্তরপত্র</h2>'+papers.map(([q,solution],i)=>'<article><b>'+bn(i+1)+'. '+q+'</b><p class="answer">'+escapeHTML(state.writing[i].text||"টাইপ করা উত্তর নেই।")+'</p><div id="preview'+i+'"></div><p><strong>মডেল সমাধান ও নম্বরবণ্টন</strong></p><p>'+solution+'</p><label>স্ব-মূল্যায়ন / ৫ <input type="number" min="0" max="5" step=".25" data-mark="'+i+'" value="'+(state.marks[i]??"")+'"></label></article>').join("");
+  papers.forEach((_,i)=>preview(i));selfSummary();network();
+  $("restart").onclick=()=>{
+    if(sending||photoBusy)return;
+    if(!confirm("এই ডিভাইসের আগের উত্তর ও ছবি মুছে নতুন পরীক্ষা শুরু করবেন?"))return;
+    try{localStorage.removeItem(KEY)}catch{warn("ডিভাইস থেকে পুরোনো উত্তর মোছা যায়নি।");return}
+    state=null;warn("");render();window.scrollTo(0,0);
+  };
+}
+function network(){
+  const box=$("network");if(!box)return;
+  const sent=state.delivery==="sent";
+  box.textContent=sending?"উত্তর পাঠানো হচ্ছে…":sent?"জমার অনুরোধ পাঠানো হয়েছে। শিটে সংরক্ষণ শিক্ষক যাচাই করতে পারবেন।":"জমার অনুরোধ অপেক্ষমাণ। সংযোগ থাকলে আবার পাঠান।";
+  if(!sending&&!sent){
+    const b=document.createElement("button");b.textContent="আবার পাঠান";b.onclick=send;box.append(b);
+  }
+  $("restart").disabled=sending||!sent;
+}
+let attendanceTask=null;
+function sendAttendance(){
+  if(!state||state.stage==="done"||state.attendanceSent)return Promise.resolve();
+  if(attendanceTask)return attendanceTask;
+  const attempt=state;
+  const body={exam:"Model Test 04",status:"Started",attemptId:attempt.attemptId,
+    startedAt:new Date(attempt.start).toISOString(),name:attempt.name,id:attempt.id,
+    studentName:attempt.name,studentId:attempt.id,studentID:attempt.id,
+    totalQuestions:60,score:null,answers:{}};
+  attendanceTask=fetch(ENDPOINT,{method:"POST",mode:"no-cors",credentials:"omit",
+    headers:{"Content-Type":"text/plain;charset=UTF-8"},body:JSON.stringify(body),
+    signal:AbortSignal.timeout(20000)}).then(()=>{
+      if(state===attempt){attempt.attendanceSent=true;save()}
+    }).catch(()=>{}).finally(()=>{attendanceTask=null});
+  return attendanceTask;
+}
+async function send(){
+  if(!state||state.stage!=="done"||sending||state.delivery==="sent")return;
+  sending=true;network();if(attendanceTask)await attendanceTask;
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),45000);
+  try{
+    // A simple text/plain request carries JSON without a CORS preflight.
+    await fetch(ENDPOINT,{method:"POST",mode:"no-cors",credentials:"omit",
+      headers:{"Content-Type":"text/plain;charset=UTF-8"},body:JSON.stringify(payload()),signal:controller.signal});
+    state.delivery="sent";save();
+  }catch{state.delivery="pending";save()}
+  finally{clearTimeout(timeout);sending=false;network()}
+}
+function render(){
+  $("clock").textContent="";
+  if(!state)startPage();else if(state.stage==="done")resultPage();else examPage();
+}
+try{
+  const raw=localStorage.getItem(KEY);if(raw)state=JSON.parse(raw);
+  render();tick();void sendAttendance();
+  if(state?.stage==="done"&&state.delivery==="pending")void send();
+}catch{warn("সংরক্ষিত পরীক্ষা খোলা যায়নি। একই ব্রাউজারের স্বাভাবিক উইন্ডোতে খুলুন।")}
+setInterval(tick,500);
+window.addEventListener("online",()=>{if(state?.stage==="done")void send();else void sendAttendance()});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)tick()});
+</script>
+</html>
